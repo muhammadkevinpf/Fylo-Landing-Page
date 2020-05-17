@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+@import "variables";
+
+//snippet
+// $primaryDark: hsl(243, 87%, 12%);
+// $primaryDesaturated: hsl(238, 22%, 44%);
+// $accentBright: hsl(224, 93%, 58%);
+// $accentCyan: hsl(170, 45%, 43%);
+// $neutralGrayishBlue: hsl(240, 75%, 98%);
+// $neutralGray: hsl(0, 0%, 75%);
+// $raleway: "Raleway", sans-serif;
+// $sans: "Open Sans", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 3em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $raleway;
+  font-weight: 700;
+  height: 10vh;
+  img {
+    height: 1.7rem;
+  }
+  ul {
+    list-style-type: none;
+    font-size: 0.8em;
+    color: $primaryDesaturated;
+    display: flex;
+  }
+  li {
+    padding: 0 2em;
+  }
+  li:nth-last-child(1) {
+    padding-right: 0;
+  }
+}
+
+.welcome-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3em;
+  font-family: $raleway;
+  height: 70vh;
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $primaryDark;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-family: $sans;
+      font-size: 1rem;
+      padding-top: 1.3rem;
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 1.3rem;
+    padding-right: 3em;
+    input {
+      font-family: $sans;
+      border: 1px solid $primaryDesaturated;
+      padding: 1em;
+    }
+    button {
+      padding: 1em;
+      background-color: $accentBright;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      font-weight: 700;
+      margin: 0 1em;
+    }
+  }
+}
+
+.illustration {
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+    height: 60vh;
+  }
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3em;
+  font-family: $raleway;
+  background: url(../images/bg-curve-desktop.svg) no-repeat center/cover;
+  padding: 8em 3em;
+  font-family: $sans;
+  margin-top: 10rem;
+  h1 {
+    font-family: $raleway;
+    color: $primaryDark;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  p {
+    color: $primaryDesaturated;
+    padding-top: 0.8rem;
+  }
+  img {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+.link {
+  padding-top: 0.8rem;
+  a {
+    color: $accentCyan;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    border-bottom: 1px solid $accentCyan;
+    img {
+      width: 1rem;
+      height: 1rem;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.card {
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 2rem;
+  width: 60%;
+  box-shadow: 0px 0px 5px 5px rgba(191, 191, 191, 0.62);
+  font-family: $sans;
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
+  .card-avatar {
+    display: flex;
+    padding-top: 1em;
+    img {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.5em;
+      border-radius: 50%;
+    }
+    h6 {
+      font-weight: 400;
+    }
+  }
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4em 3em;
+  background-color: $primaryDesaturated;
+  color: $neutralGrayishBlue;
+  font-family: $raleway;
+  .contact-text {
+    width: 70%;
+    h4 {
+      font-weight: 700;
+      font-size: 1.7em;
+    }
+    p {
+      font-family: $sans;
+      padding-top: 1em;
+    }
+  }
+  .contact-input {
+    padding: 0 4em;
+    input {
+      width: 100%;
+      border: none;
+      border-radius: 2px;
+      padding: 0.8em;
+    }
+    button {
+      padding: 1em 2em;
+      background-color: $accentBright;
+      font-weight: 700;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      margin-top: 1em;
+    }
+  }
+}
+
+footer {
+  background-color: $primaryDark;
+  padding: 4em 3em;
+  font-family: $sans;
+}
+
+.footer-container {
+  color: $neutralGray;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  padding-top: 1em;
+  p {
+    padding-bottom: 1em;
+  }
+  img {
+    padding-right: 1em;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      padding-bottom: 1em;
+    }
+  }
+  span {
+    border: 1px solid $neutralGray;
+    border-radius: 50%;
+    padding: 0.2em 0.6em;
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .welcome-section {
+    grid-template-columns: 1fr;
+    .welcome-text {
+      order: 2;
+      text-align: center;
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+    img {
+      order: 1;
+      height: 40vh;
+      margin: 3em auto;
+    }
+    form {
+      grid-template-columns: 1fr;
+      padding-right: 0;
+      button {
+        margin: 1em 0;
+      }
+    }
+  }
+  .about-section {
+    margin-top: 20rem;
+    background: url(../images/bg-curve-mobile.svg) no-repeat top/cover;
+    grid-template-columns: 1fr;
+    padding: 8em 3em;
+    .illustration {
+      order: 1;
+      padding-bottom: 5em;
+      img {
+        height: 40vh;
+      }
+    }
+    .about-text {
+      order: 2;
+      h1 {
+        text-align: center;
+        font-size: 1.4em;
+      }
+      .link {
+        text-align: center;
+        padding: 3em;
+      }
+    }
+    .card {
+      width: 100%;
+    }
+  }
+  .contact-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    .contact-text {
+      width: 100%;
+      padding-bottom: 2em;
+      h4 {
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 1.2em;
+      }
+    }
+    .contact-input {
+      padding: 0 2.5em;
+      button {
+        width: 100%;
+      }
+    }
+  }
+  .footer-container {
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    .footer-contact {
+      padding-top: 1em;
+    }
+    .footer-social {
+      text-align: center;
+    }
+  }
+}
