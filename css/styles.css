@@ -290,6 +290,9 @@ footer {
 }
 
 @media only screen and (max-width: 660px) {
+  .container {
+    padding: 0 2em;
+  }
   .welcome-section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

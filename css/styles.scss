@@ -235,6 +235,9 @@ footer {
 }
 
 @media only screen and (max-width: 660px) {
+  .container {
+    padding: 0 2em;
+  }
   .welcome-section {
     grid-template-columns: 1fr;
     .welcome-text {
